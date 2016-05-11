@@ -1,0 +1,85 @@
+body{
+  font-family: Quicksand;
+}
+/*.list-inline{
+  /*position: absolute;*/
+  /*display: inline-block ;
+
+  margin-left: 0%;
+
+}*/
+@media  (min-width:300px){
+#col1{
+float:left;
+padding :0 1rem;
+width:calc(100%/3);
+  }
+
+
+.navbar{
+  background-color: black;
+  color: white;
+}
+
+.about-me{
+  padding-top: 65px;
+}
+
+p{
+  font-size: 18px;
+}
+
+h2{
+ padding-left: 100px;
+ display: inline-block;
+}
+
+.btn{
+  float: right;
+  margin: 5px;
+}
+
+h1{
+  text-align: center;
+  text-decoration: overline underline;
+}
+
+h5{
+  text-align: center
+}
+
+.portfolio{
+  margin-top: 5px;
+  width:95%;
+
+
+}
+
+
+input[type=text]{
+  border: 1px solid black;
+  width: 350px;
+}
+
+.contact-form{
+  margin-left: 400px;
+  text-align: left;
+}
+
+.msg-input{
+  height: 200px;
+  width: 350px;
+}
+
+#btn-submit{
+  margin-top: 5px;
+}
+
+input{
+  margin: 2px;
+}
+
+.social-media .btn{
+
+}
+}
