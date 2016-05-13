@@ -27,7 +27,7 @@ Article.prototype.toHtml = function() {
 
   // This is a separate inclusion of the publication date as a 'title' attribute
   // to show on hover:
-  // $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
+  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
 
   // Display the date as a relative number of "days ago":
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
@@ -35,18 +35,18 @@ Article.prototype.toHtml = function() {
 
   // $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 // var n= parseInt((new Date()-new Date(this.publishedOn))/60/60/24/1000);
-// console.log(this.daysAgo);
+console.log(this.daysAgo);
   $newArticle.append('<hr>');
   $newArticle.removeClass('template');
   // TODO: This cloned article is no longer a template, so we should remove that class...
-
+//var date = new Date("2016-05-13");
   return $newArticle;
 };
+
+// Sort our data by date published, descending order
 ourLocalData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
-
-// Sort our data by date published, descending order
 
 // Now iterate through our transformed collection and instantiate a new Article
 //  instance.
