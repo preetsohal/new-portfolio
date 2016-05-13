@@ -30,12 +30,16 @@ Article.prototype.toHtml = function() {
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
 
   // Display the date as a relative number of "days ago":
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
+  // $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+// var n= parseInt((new Date()-new Date(this.publishedOn))/60/60/24/1000);
+console.log(this.daysAgo);
   $newArticle.append('<hr>');
   $newArticle.removeClass('template');
   // TODO: This cloned article is no longer a template, so we should remove that class...
-
+//var date = new Date("2016-05-13");
   return $newArticle;
 };
 
