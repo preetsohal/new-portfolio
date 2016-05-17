@@ -12,6 +12,16 @@ body{
   margin: 0 auto;
   text-align: center;
 }
+.projects-container {
+  width: 100%;
+  align-content: center;
+}
+
+.projects-display {
+  display: block;
+  width:90%;
+  margin: 0 auto;
+}
 
 .navbar{
   background-color: black;
@@ -86,4 +96,3 @@ input{
     width: 35%;
     margin: 0 auto;
   }
-  

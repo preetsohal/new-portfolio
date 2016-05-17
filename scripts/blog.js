@@ -1,16 +1,30 @@
-var ourLocalData = [
+var allMyProjects = [
   {
-    title:       'portfolio',
-    category:    'test',
-    author:      'Gurpreet',
-    siteUrl:     'https://gurpreet.herokuapp.com',
+    title:       'campfirecoffee',
+    category:    'class project',
+    projectIcon: 'image is coming soon',
+    projectGhPages: 'https://preetsohal.github.io/campfirecoffee',
     publishedOn: '2016-27-03',
-    body:        '<p>This is just an test body.this is being used as a test for body tag on html page.i am filling this body tag with some random lines. this page supposed to tell about my portfolio but i am just filling the spot. i will nopw start adding some more lines. you may not understand those lines but its ok. </p>'
+    projectSourceCode: 'https://github.com/preetsohal/campfirecoffee'
   },{
-    title:       'portfolio 2',
-    category:    'test2',
-    author:      'Gurpreet singh',
-    siteUrl:     'https://gurpreet.herokuapp.com',
+    title:       'Bus Mall',
+    category:    'class project',
+    projectIcon: 'image is coming soon',
+    projectGhPages: 'https://preetsohal.github.io/bus-mall',
     publishedOn: '2016-13-05',
-    body:        '<p>This is just an test body.this is being used as a test for body tag on html page.i am filling this body tag with some random lines. this page supposed to tell about my portfolio but i am just filling the spot. i will nopw start adding some more lines. you may not understand those lines but its ok. </p>'
+    projectSourceCode:  'https://github.com/preetsohal/bus-mall'
+  },{
+    title:       'Guessing Games',
+    category:    'quiz game',
+    projectIcon: 'image is coming soon',
+    projectGhPages: 'https://preetsohal.github.io/201-First-Guessing-Game',
+    publishedOn: '2016-13-01',
+    projectSourceCode:  'https://github.com/preetsohal/201-First-Guessing-Game'
+  },{
+    title:       'Portfolio',
+    category:    'portfolio',
+    projectIcon: 'image is coming soon',
+    projectGhPages: 'https://gurpreet.herokuapp.com',
+    publishedOn: '2016-23-03',
+    projectSourceCode: 'https://github.com/preetsohal/portfolio'
   }];

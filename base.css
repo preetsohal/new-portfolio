@@ -1,0 +1,54 @@
+/******************HEADER******************/
+.title {
+  text-align: center;
+}
+
+.social-media li{
+  display: inline-block;
+  padding: 10px;
+}
+
+.nav li {
+  padding: 10px;
+  display: block;
+  font-size: 20px;
+}
+/******************MAIN SECTION******************/
+.resume-container {
+  width: 100%;
+  align-content: center;
+}
+
+.projects-container {
+  width: 100%;
+  align-content: center;
+}
+
+.projects-display {
+  display: block;
+  width:90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+/******************HEADER******************/
+  .nav li {
+    margin: 10px;
+    display:inline-block;
+  }
+
+  .social-media li{
+    margin: 20px;
+  }
+/******************MAIN SECTION******************/
+  .projects-display {
+    display: inline-block;
+    width:30%;
+    margin: 10px;
+  }
+
+  /*.resume-container {
+    float: left;
+    width: 65%;
+  }
+}*/

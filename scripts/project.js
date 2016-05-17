@@ -1,61 +1,45 @@
-var articles = [];
+var projects = [];
 
-function Article (opts) {
-  // DONE: Use the js object passed in to complete this contructor function:
-  // Save ALL the properties of `opts` into `this`.
+function Project (opts){
   this.title = opts.title;
   this.category = opts.category;
-  this.author = opts.author;
-  this.siteUrl = opts.siterUrl;
   this.publishedOn = opts.publishedOn;
-  this.body = opts.body;
-
+  this.projectGhPages = opts.projectGhPages;
+  this.projectIcon = opts.projectIcon;
+  this.projectSourceCode = opts.projectSourceCode;
 }
 
-Article.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-
-  $newArticle.attr('data-category', this.category);
-  // TODO: Use jQuery to fill in the template with properties
-  // from this particular Article instance. We need to fill in:
-  // the author name and url, the article title and body, and the
-  // publication date.
-  $newArticle.find('h1').html(this.title);
-  $newArticle.find('address > a').text(this.author);
-  $newArticle.find('address > a').attr('href', this.siteUrl);
-  $newArticle.find('.article-body').html(this.body);
-
-  // This is a separate inclusion of the publication date as a 'title' attribute
-  // to show on hover:
-  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
-
-  // Display the date as a relative number of "days ago":
-  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
-  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-
-  // $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-// var n= parseInt((new Date()-new Date(this.publishedOn))/60/60/24/1000);
-console.log(this.daysAgo);
-  $newArticle.append('<hr>');
-  $newArticle.removeClass('template');
-  // TODO: This cloned article is no longer a template, so we should remove that class...
-//var date = new Date("2016-05-13");
-  return $newArticle;
+//render projects to the html page
+Project.prototype.toHtml = function() {
+  // var $newProjectHtml = $('section.template').clone();
+  // $newProjectHtml.find('h3').html(this.title);
+  // $newProjectHtml.find('.gh-pages').attr('href', this.projectGhPages);
+  // $newProjectHtml.find('img').attr('src', this.projectIcon);
+  // $newProjectHtml.find('p').html(this.projectDescription);
+  // $newProjectHtml.find('.source-code').attr('href', this.projectSourceCode);
+  // $newProjectHtml.removeClass('template');
+  // $newProjectHtml.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
+  // $newProjectHtml.addClass('projects-display');
+  // return $newProjectHtml;
+  this.publishedDaysAgo = 'about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago';
+  var $source = $('#render-projects').html();
+  var template = Handlebars.compile($source);
+  // this.classList.add('projects-display');
+  return template(this);
 };
 
-// Sort our data by date published, descending order
-ourLocalData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+//sort projects by date published, newes first
+  allMyProjects.sort(function(a,b) {
+  return(new Date(b.publishedOn) - new Date(a.publishedOn));
 });
 
-// Now iterate through our transformed collection and instantiate a new Article
-//  instance.
-ourLocalData.forEach(function(ele) {
-  articles.push(new Article(ele));
+//iterate through the collection of all my projects (projectItems.js)
+//and create new Project instances, push them into projects[]
+  allMyProjects.forEach (function(project) {
+  projects.push(new Project (project));
 });
 
-// Append each Article to the DOM. Look carefully:
-//   This '.toHtml' method is one we created.
-articles.forEach(function(a){
-  $('#articles').append(a.toHtml());
+//append each Project from the projects[] to the DOM
+projects.forEach (function(p) {
+  $('#projects').append(p.toHtml());
 });
