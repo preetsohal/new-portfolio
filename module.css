@@ -1,0 +1,26 @@
+.template {
+  display: none;
+}
+
+.resume-container p {
+  width: 90%;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.projects-container section {
+  margin: 20px 0px 20px 0px;
+}
+
+.project-header {
+  margin: 10px;
+}
+
+.project-header time {
+  margin: 10px;
+}
+
+.project-icons {
+  width: 100%;
+  margin: 0 auto;
+}

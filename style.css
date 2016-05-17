@@ -12,7 +12,7 @@ body{
   margin: 0 auto;
   text-align: center;
 }
-.projects-container {
+/*.projects-container {
   width: 100%;
   align-content: center;
 }
@@ -21,7 +21,7 @@ body{
   display: block;
   width:90%;
   margin: 0 auto;
-}
+}*/
 
 .navbar{
   background-color: black;

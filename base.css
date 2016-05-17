@@ -29,6 +29,10 @@
   width:90%;
   margin: 0 auto;
 }
+img {
+  max-width: 60%;
+  height: auto;
+}
 
 @media (min-width: 640px) {
 /******************HEADER******************/

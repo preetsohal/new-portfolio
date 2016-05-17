@@ -22,6 +22,7 @@ Project.prototype.toHtml = function() {
   // $newProjectHtml.addClass('projects-display');
   // return $newProjectHtml;
   this.publishedDaysAgo = 'about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago';
+  console.log(parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000));
   var $source = $('#render-projects').html();
   var template = Handlebars.compile($source);
   // this.classList.add('projects-display');
