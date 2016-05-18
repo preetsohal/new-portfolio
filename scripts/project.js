@@ -5,7 +5,7 @@ function Project(opts) {
     this.category = opts.category;
     this.publishedOn = opts.publishedOn;
     this.projectGhPages = opts.projectGhPages;
-    this.projectIcon = opts.projectIcon;
+    this.Icon = opts.Icon;
     this.projectSourceCode = opts.projectSourceCode;
 }
 
