@@ -30,7 +30,7 @@ projectView.handleMainNav = function() {
     var $choice = $(this).data('content');
     $('.tab-content').hide();
     $('.tab-content').each(function() {
-      if($(this).attr('id') === $choice) {
+      if($(this).attr('id') === $choice) {a
         $(this).fadeIn();
       }
       if($(this).attr('id') === 'projects'){
@@ -47,3 +47,4 @@ $(document).ready(function() {
   projectView.handleCategoryFilter();
   projectView.handleMainNav();
 });
+aaa
