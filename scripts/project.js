@@ -11,32 +11,24 @@ function Project(opts) {
 
 //render projects to the html page
 Project.prototype.toHtml = function() {
-    // var $newProjectHtml = $('section.template').clone();
-    // $newProjectHtml.find('h3').html(this.title);
-    // $newProjectHtml.find('.gh-pages').attr('href', this.projectGhPages);
-    // $newProjectHtml.find('img').attr('src', this.projectIcon);
-    // $newProjectHtml.find('p').html(this.projectDescription);
-    // $newProjectHtml.find('.source-code').attr('href', this.projectSourceCode);
-    // $newProjectHtml.removeClass('template');
-    // $newProjectHtml.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
-    // $newProjectHtml.addClass('projects-display');
-    // return $newProjectHtml;
+
     this.publishedDaysAgo = 'about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' days ago';
-    console.log(parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000));
     var $source = $('#render-projects').html();
     var template = Handlebars.compile($source);
     // this.classList.add('projects-display');
     return template(this);
 };
 Project.fetchAll = function() {
-        $.getJSON("data.json", function(data) {
+        // $.getJSON("data.json", function(data) {
                 if (localStorage.data) {
-                    localStorage.data = data;
+                  //  localStorage.data = data;
+}else  {
+     $.getJSON("data.json",function(data){
+        Project.loadAll(data);
+        localStorage.data = data;
+        // projectView.loadAll(data);
 
-                    //  console.log(data);
-                    Project.loadAll(data);
-                } })
-        }
+      });
 
         //sort projects by date published, newes first
         Project.loadAll = function(allMyProjects) {
@@ -54,4 +46,6 @@ Project.fetchAll = function() {
             projects.forEach(function(p) {
                 $('#projects').append(p.toHtml());
             });
-        }
+}
+}
+}

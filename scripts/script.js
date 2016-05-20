@@ -47,4 +47,3 @@ $(document).ready(function() {
   projectView.handleCategoryFilter();
   projectView.handleMainNav();
 });
-aaa
