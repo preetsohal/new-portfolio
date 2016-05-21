@@ -19,7 +19,7 @@ Project.prototype.toHtml = function() {
     return template(this);
 };
 Project.fetchAll = function() {
-  debugger;
+  // debugger;
         // $.getJSON("data.json", function(data) {
                 if (false) {
 // debugger;
@@ -31,7 +31,8 @@ Project.fetchAll = function() {
         // projectView.loadAll(data);
 
       });
-
+}
+}
         //sort projects by date published, newes first
         Project.loadAll = function(allMyProjects) {
             allMyProjects.sort(function(a, b) {
@@ -40,18 +41,18 @@ Project.fetchAll = function() {
 debugger;
             //iterate through the collection of all my projects (projectItems.js)
             //and create new Project instances, push them into projects[]
-            allMyProjects.forEach(function(project) {
-                projects.push(new Project(project));
+            allMyProjects.forEach(function(object) {
+              projects.push(new Project(object));
+            });
+                // projects.push(new Project(project));
 
   debugger;
-          });
+          // });
 
             //append each Project from the projects[] to the DOM
-            projects.forEach(function(p) {
-debugger;
-                $('#projects').append(p.toHtml());
+            projects.forEach(function(item) {
+                $('#projects').append(item.toHtml());
             });
 }
-}
-}
+
 Project.fetchAll();
