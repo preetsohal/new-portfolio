@@ -9,19 +9,15 @@ function Project(opts) {
     this.projectSourceCode = opts.projectSourceCode;
 }
 
-//render projects to the html page
 Project.prototype.toHtml = function() {
 
     this.publishedDaysAgo = 'about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' days ago';
     var $source = $('#render-projects').html();
     var template = Handlebars.compile($source);
-    // this.classList.add('projects-display');
     return template(this);
 };
 Project.fetchAll = function() {
-        // $.getJSON("data.json", function(data) {
                 if (localStorage.data) {
-                  //  localStorage.data = data;
 }else  {
      $.getJSON("data.json",function(data){
         Project.loadAll(data);
