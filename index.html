@@ -1,38 +1,55 @@
-<!-- Fonts -->
+
+<!DOCTYPE html>
 <html>
 
-<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-<!-- End fonts -->
-
 <head>
-  <!--Fontawesome-->
+  <!-- End fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href= "base.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width,intial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <!--end Fontawesome-->
+  <link rel="stylesheet" href= "module.css">
 
+  <script id="render-projects" type="text/x-handlebars-template">
+      <section class="projects-display"  class="project-item" data-category={{category}}>
+        <header class="project-header">
+          <h4>{{title}}</h4>
+          <!-- <h4>Category: {{category}}</h4> -->
+          <time>{{publishedDaysAgo}}</time>
+        </header>
+
+        <main class="project-body">
+          <a class="gh-pages" href={{projectGhPages}}>
+            <div class='project-icons'><img src={{Icon}}></div>
+            <p></p>
+          </a>
+        </main>
+
+        <footer>
+          <a class="source-code" href={{projectSourceCode}}>Source Code on GitHub.com</a>
+        </footer>
+      </section>
+    </script>
+ </head>
+<body>
   <nav class="navbar navbar-default navbar-fixed-top">
     <h2>G/S</h2>
 
     <a href=#Contact>
       <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-phone"></span> Contact</button>
     </a>
-
     <a href=#Portfolio>
       <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-folder-open"></span> Portfolio</button>
     </a>
-
     <a href=#Home>
       <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> Home</button>
     </a>
-
   </nav>
-</head>
 
-<body>
   <div class="container">
     <div id="Home" class="about-me">
-      <h1>About Me</h1>
+      <h1>Gurpreet</h1>
       <h5>Who am I?</h5>
       <p class="about">My name is Gurpreet Singh. and I'm currently a coder-in-training through the CodeFellows Seattle. Codefellows encourages learning through their lessons in addition to doing individual projects and eventually doing real work for nonprofits!</p>
       <br>
@@ -51,58 +68,67 @@
       </div>
       <br>
     </div>
-    <div id="Contact" class="Contact">
-      <h1>Contact Me</h1>
-      <h5>Get in touch!</h5>
-    <main>
-      <section id="articles">
-        <article class="template" data-category="cat">
-          <header>
-            <h1>Title</h1>
-            <div class="byline">
-              By <address><a href="">Author Name</a></address> published
-              <time pubdate datetime="2000-01-01">Publish Time</time>
-            </div>
-          </header>
-          <section class="article-body"></section>
-        </article>
-      </section>
-  </div>
-  </main>
-  <div class="contact-form">
-    <form action="/submit-email">
-      <input type="text" Gurpreet Singh="Your Name">
-      <br>
-      <input type="text" preetsohal@live.com="Your Email">
-      <br>
-      <input type="text" placeholder="Subject">
-      <br>
-      <input class="msg-input" type="text" col="8" rows="50" placeholder="Your Message">
-      <br>
-      <button type="Submit" id="btn-submit">Submit</button>
+
+  <div align="center">
+  <main>
+  <section id="projects" class="tab-content">
+          <h3>My Projects</h3>
+
+          <div id="filter">
+            <select id="category-filter">
+              <option val="">--Search for a project by category--</option>
+            </select>
+          </div>
+
+          <div class="projects-container">
+
+          </div>
+        </section>
+
+        <!-- </div> -->
+      </main></div>
+      <div id="Contact" class="Contact">
+        <h1>Contact Me</h1>
+        <h5>Get in touch!</h5>
+
     </div>
-  </div>
-  <a href="http://www.twitter.com">
+    <div class="contact-form">
+      <form action="/submit-email">
+        <input type="text" Gurpreet Singh="Your Name">
+        <br>
+        <input type="text" preetsohal@live.com="Your Email">
+        <br>
+        <input type="text" placeholder="Subject">
+        <br>
+        <input class="msg-input" type="text" col="8" rows="50" placeholder="Your Message">
+        <br>
+        <button type="Submit" id="btn-submit">Submit</button>
+      </form>
+    </div>
+    </div>
+
     <div class="social-media">
-      <btn class="btn btn-primary btn-lrg"><span class="fa fa-twitter"></span> Tweet me</btn>
-    </a>
+      <a href="http://www.twitter.com">
+        <btn class="btn btn-primary btn-lrg"><span class="fa fa-twitter"></span> Tweet me</btn>
+      </a>
 
-    <a href="http://www.facebook.com">
-      <btn class="btn btn-primary btn-large"><span class="fa fa-facebook"></span> Friend me</btn>
-    </a>
-
-
-  </div>
-
-</form>
+      <a href="http://www.facebook.com">
+        <btn class="btn btn-primary btn-large"><span class="fa fa-facebook"></span> Friend me</btn>
+      </a>
+    </div>
   <footer>
-    &copy; 2016 Code Fellows | Static Blog | Happy Ipsum!
+    &copy; 2016 Gupreet Singh | Static Blog.
   </footer>
   <!-- // DONE: Include any/all needed script tags -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
   <script src="scripts/blog.js"></script>
   <script src="scripts/project.js"></script>
   <script src= "scripts/script.js"></script>
+  <script>
+    Project.fetchAll();
+  </script>
 </body>
 
 </html>

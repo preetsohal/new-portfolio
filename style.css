@@ -1,16 +1,27 @@
 body{
   font-family: Quicksand;
 }
-/*.list-inline{
-  /*position: absolute;*/
-  /*display: inline-block ;
 
-  margin-left: 0%;
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 
+.contact-form {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+/*.projects-container {
+  width: 100%;
+  align-content: center;
+}
+
+.projects-display {
+  display: block;
+  width:90%;
+  margin: 0 auto;
 }*/
-@media  (min-width:300px){
-
-
 
 .navbar{
   background-color: black;
@@ -26,14 +37,14 @@ p{
 }
 
 h2{
- padding-left: 100px;
+ /*padding-left: 100px;*/
  display: inline-block;
 }
 
-.btn{
+/*.btn{
   float: right;
   margin: 5px;
-}
+}*/
 
 h1{
   text-align: center;
@@ -41,41 +52,47 @@ h1{
 }
 
 h5{
-  text-align: center
+  text-align: center;
 }
 
 .portfolio{
   margin-top: 5px;
   width:95%;
-
-
 }
 
 
 input[type=text]{
   border: 1px solid black;
-  width: 350px;
-}
-
-.contact-form{
-  margin-left: 400px;
-  text-align: left;
+  width: 100%;
 }
 
 .msg-input{
   height: 200px;
-  width: 350px;
+  /*width: 350px;*/
 }
 
 #btn-submit{
   margin-top: 5px;
+  margin: 0 auto;
 }
 
 input{
   margin: 2px;
 }
 
-.social-media .btn{
+/*form > *{
+  align-self: center;
+  margin: 0 auto;
+}*/
+/*.list-inline{
+  /*position: absolute;*/
+  /*display: inline-block ;
 
-}
-}
+  margin-left: 0%;
+
+}*/
+@media  (min-width:640px){
+  .contact-form {
+    width: 35%;
+    margin: 0 auto;
+  }
