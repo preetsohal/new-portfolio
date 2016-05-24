@@ -18,7 +18,7 @@
     {
         "title": "Portfolio",
         "category": "portfolio",
-        "m toIcon": "images/portfolio.png",
+        "Icon": "images/portfolio.png",
         "projectGhPages": "https://gurpreet.herokuapp.com",
         "publishedOn": "2016-03-23",
         "projectSourceCode": "https://github.com/preetsohal/portfolio"
