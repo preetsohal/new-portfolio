@@ -35,14 +35,14 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <h2>G/S</h2>
 
-        <a href=#Contact>
-            <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-phone"></span> Contact</button>
+        <a href=/>
+        <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> Home</button>
         </a>
-        <a href=#Portfolio>
-            <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-folder-open"></span> Portfolio</button>
+        <a href=/projects>
+            <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-folder-open"></span> projects</button>
         </a>
-        <a href=#Home>
-            <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> Home</button>
+        <a href=/contact>
+          <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-phone"></span> Contact</button>
         </a>
     </nav>
 
@@ -50,29 +50,23 @@
         <div id="Home" class="about-me">
             <h1>Gurpreet</h1>
             <img class="pic" src="images/gurpreet.jpg">
-            <h5>Who am I?</h5>
+            <h5> <b> Who am I? </b></h5>
             <p class="about">My name is Gurpreet Singh. and I'm currently a coder-in-training through the CodeFellows Seattle. Codefellows encourages learning through their lessons in addition to doing individual projects and eventually doing real work for nonprofits!</p>
             <br>
-            <p>i have Experiene in object-oriented programming; developing, testing and debugging code; designing interfaces, and administering systems and networks.
+            <p>i have Experiene in object-oriented programming; developing, testing and debugging code; designing interfaces, and administering systems and networks. i am web and apllication developer.i can quickly learn and master new technologies. I love
+                working in both team and self-directed settings. I love coding.I am Fast learner, hard worker and team player who is proficient in an array of scripting languages and multimedia Web tools. i built solid expertise in html, css, javascript
+                and jQuery. i focus on creating clean and unique design.</p>
 
-i am web and apllication developer.i can quickly learn and master new technologies. I love working in both team and self-directed settings.
-
-I love coding.I am Fast learner, hard worker and team player who is proficient in an array of scripting languages and multimedia Web tools.
-
-i built solid expertise in html, css, javascript and jQuery.
-
-i focus on creating clean and unique design.</p>
-
-            <div id="Portfolio" class="portfolio">
+            <!-- <div id="Portfolio" class="portfolio">
                 <h1>Portfolio</h1>
-                <h5>What have I been working on?</h5>
-                <div class="portfolio-imgs">
+                <h5>What have I been working on?</h5> -->
+            <div class="portfolio-imgs">
 
-                    <ul class="list-inline">
+                <ul class="list-inline">
 
-                    </ul>
-                </div>
+                </ul>
             </div>
+            <!-- </div> -->
             <br>
         </div>
 
@@ -91,42 +85,47 @@ i focus on creating clean and unique design.</p>
 
                     </div>
                 </section>
-            </main>
+
         </div>
 
-        <div id="Contact" class="Contact">
-            <h1>Contact Me</h1>
-            <h5>Get in touch!</h5>
-        </div>
 
-        <div class="contact-form">
-            <form action=mailto:preetsohal@live.com" method="post" enctype="text/plain">
-                <input type="text" placeholder="Your Name">
-                <br>
-                <input type="text" placeholder="Your Email">
-                <br>
-                <input type="text" placeholder="Subject">
-                <br>
-                <input class="msg-input" type="text" col="8" rows="50" placeholder="Your Message">
-                <br>
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </form>
-        </div>
-    </div>
+            <!-- <div class="contact-form">
+                <form action="mailto:preetsohal@live.com" method="post" enctype="text/plain">
+                    <input type="text" placeholder="Your Name">
+                    <br>
+                    <input type="text" placeholder="Your Email">
+                    <br>
+                    <input type="text" placeholder="Subject">
+                    <br>
+                    <input class="msg-input" type="text" col="8" rows="50" placeholder="Your Message">
+                    <br>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
+            </div> -->
 
+
+    <div id="Contact" class="Contact">
+      <h1>Contact Me</h1>
+      <h5>Get in touch!</h5>
     <div class="social-media">
+      <a href="mailto:preetsohal@live.com">
+          <btn class="btn btn-primary btn-lrg"><span  class="fa fa-envelope-square"></span> mail me</btn>
+      </a>
         <a href="https://twitter.com/gurpsohal">
-            <btn class="btn btn-primary btn-lrg"><span class="fa fa-twitter"></span> Tweet me</btn>
+            <btn class="btn btn-primary btn-lrg"><span class="fa fa-twitter-square"></span> Tweet me</btn>
         </a>
 
         <a href="https://www.facebook.com/profile.php?id=100011594264148">
-            <btn class="btn btn-primary btn-large"><span class="fa fa-facebook"></span> Friend me</btn>
+            <btn class="btn btn-primary btn-lrg"><span class="fa fa-facebook-square">
+</span> friend me</btn>
         </a>
     </div>
+  </div>
     <footer>
         &copy; 2016 Gupreet Singh | Static Blog.
     </footer>
+  </main>
     <!-- // DONE: Include any/all needed script tags -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
@@ -135,12 +134,12 @@ i focus on creating clean and unique design.</p>
     <script src="scripts/project.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/page.js"></script>
+    <script src="scripts/portfolioController.js"></script>
+    <script src="scripts/adminController.js"></script>
+    <script src="scripts/contactController.js"></script>
     <script src="scripts/routes.js"></script>
 
 
-    <script>
-        Project.fetchAll();
-    </script>
 </body>
 
 </html>

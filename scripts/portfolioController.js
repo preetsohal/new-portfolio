@@ -2,14 +2,14 @@
   var portfolioController = {};
 
 
-  Project.createTable();
 
   portfolioController.index = function() {
-    
+  if (projects.length == 0){
     Project.fetchAll(projectView.initIndexPage);
-    $('#home').hide();
-    $('#portfolio').show();
-    $('#contact').hide();
+  };
+    $('#Home').hide();
+    $('#projects').show();
+    $('#Contact').hide();
 
   };
 

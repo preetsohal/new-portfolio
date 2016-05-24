@@ -1,7 +1,7 @@
 
-   page('/', articlesController.index);
-   page('/portfolio', portfolioController.index);
-   page('/contact', adminController.index);
+   page('/', adminController.index);
+   page('/projects', portfolioController.index);
+   page('/contact', contactController.index);
 
 
 

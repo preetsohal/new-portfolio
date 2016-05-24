@@ -23,6 +23,7 @@ Project.fetchAll = function() {
 }
 else  {
      $.getJSON("data.json",function(data){
+        console.log(data);
         Project.loadAll(data);
         localStorage.setItem ('data', JSON.stringify(data));
         // projectView.loadAll(data);

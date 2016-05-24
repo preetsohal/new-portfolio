@@ -2,10 +2,12 @@
   var adminController = {};
 
   adminController.index = function() {
+      if (projects.length == 0){
     Project.fetchAll(projectView.initAdminPage);
-    $('#home').show();
-    $('#portfolioController').hide();
-    $('#contact').hide();
+  };
+    $('#Home').show();
+    $('#projects').hide();
+    $('#Contact').hide();
   };
 
   module.adminController = adminController;
