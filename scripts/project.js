@@ -50,3 +50,8 @@ Project.loadAll = function(allMyProjects) {
         $('#projects').append(p.toHtml());
     });
 }
+// $('.more').readmore({
+//   speed: 75,
+//   lessLink: '<a href="#">Read less</a>'
+// });
+// $('.more').readmore();
