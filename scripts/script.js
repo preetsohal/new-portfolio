@@ -20,8 +20,7 @@ projectView.handleCategoryFilter = function() {
     }else{
       $('.projects-display').show();
     };
-    // $(this).val('--Search for a project by category--');
-    // console.log($(this).val());
+    
   });
 };
 

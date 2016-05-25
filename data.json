@@ -18,9 +18,58 @@
     {
         "title": "Portfolio",
         "category": "portfolio",
-        "m toIcon": "images/portfolio.png",
+        "Icon": "images/portfolio.png",
         "projectGhPages": "https://gurpreet.herokuapp.com",
         "publishedOn": "2016-03-23",
         "projectSourceCode": "https://github.com/preetsohal/portfolio"
-    }
-]
+    },
+
+    {
+        "title": "Bus Menu",
+        "category": "class project",
+        "Icon": "images/bus-mall.png",
+        "projectGhPages": "https://preetsohal.github.io/bus-mall",
+        "publishedOn": "2016-05-13",
+        "projectSourceCode": "https://github.com/preetsohal/bus-mall"
+    },
+    {
+        "title": "Guessing Games 2",
+        "category": "quiz game",
+        "Icon": "images/quiz.png",
+        "projectGhPages": "https://preetsohal.github.io/201-First-Guessing-Game",
+        "publishedOn": "2016-01-13",
+        "projectSourceCode": "https://github.com/preetsohal/201-First-Guessing-Game"
+    },
+    {
+        "title": "Portfolio gurpreet",
+        "category": "portfolio",
+        "Icon": "images/portfolio.png",
+        "projectGhPages": "https://gurpreet.herokuapp.com",
+        "publishedOn": "2016-03-23",
+        "projectSourceCode": "https://github.com/preetsohal/portfolio"
+    },
+        {
+            "title": "Bus Mall",
+            "category": "class project4",
+            "Icon": "images/bus-mall.png",
+            "projectGhPages": "https://preetsohal.github.io/bus-mall",
+            "publishedOn": "2016-05-13",
+            "projectSourceCode": "https://github.com/preetsohal/bus-mall"
+        },
+        {
+            "title": "Guessing Games",
+            "category": "quiz game1",
+            "Icon": "images/quiz.png",
+            "projectGhPages": "https://preetsohal.github.io/201-First-Guessing-Game",
+            "publishedOn": "2016-01-13",
+            "projectSourceCode": "https://github.com/preetsohal/201-First-Guessing-Game"
+        },
+        {
+            "title": "Portfolio",
+            "category": "portfolio2",
+            "Icon": "images/portfolio.png",
+            "projectGhPages": "https://gurpreet.herokuapp.com",
+            "publishedOn": "2016-03-23",
+            "projectSourceCode": "https://github.com/preetsohal/portfolio"
+        }
+    ]
