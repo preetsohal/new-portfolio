@@ -16,7 +16,7 @@
 
   repoView.index = function() {
     ui();
-    $('#about ul').append(
+    $('.about ul').append(
       repos.with('name').map(render)
     );
   };

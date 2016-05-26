@@ -5,11 +5,11 @@
 
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/preetsohal/repos' +
+      url: '/github/users/preetsohal/repos' +
           '?per_page=10' +
           '&sort=updated',
       type: 'GET',
-      headers: {'Authorization': 'token ' + myToken},
+      // headers: {'Authorization': 'token ' + myToken},
       success: function(data, message, xhr) {
         console.log(data);
         repos.all = data;

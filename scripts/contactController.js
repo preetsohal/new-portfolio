@@ -5,6 +5,7 @@
     $('#Contact').show();
     $('#Home').hide();
     $('#projects').hide();
+    $('#github').hide();
   };
 
   module.contactController = contactController;
